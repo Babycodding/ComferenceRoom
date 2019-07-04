@@ -11,7 +11,7 @@ class HomePage extends Component{
         // const {classes} = this.props
         return(
             <div>
-               
+               test
             </div>
         )
     }

@@ -4,6 +4,10 @@ export const styles = {
     grow: {
         flexGrow: 1,
     },
+    appBar: {
+        zIndex: theme.zIndex.drawer + 1,
+    },
+    toolbar: theme.mixins.toolbar,
     menuButton: {
         marginRight: theme.spacing(2),
     },
@@ -60,4 +64,13 @@ export const styles = {
             display: 'none',
         },
     },
+    drawer: {
+        width: 240,
+        flexShrink: 0,
+    },
+    drawerPaper: {
+        width: 240,
+        // paddingTop:50,
+        zIndex: -1
+    }
 }
