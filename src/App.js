@@ -7,16 +7,12 @@ import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
 import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
-import MenuItem from '@material-ui/core/MenuItem';
-import Menu from '@material-ui/core/Menu';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import Drawer from '@material-ui/core/Drawer';
-import Divider from '@material-ui/core/Divider';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -35,7 +31,7 @@ class App extends Component {
     const { classes } = this.props
     return (
       <div>
-        <AppBar position="static" className={classes.appBar}>
+        <AppBar position="fixed" className={classes.appBar}>
           <Toolbar>
             <Typography className={classes.title} variant="h6" noWrap>
               Material-UI
@@ -98,28 +94,17 @@ class App extends Component {
         >
           <div className={classes.toolbar} />
           <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
-          </List>
-          <Divider />
-          <List>
-            {['All mail', 'Trash', 'Spam'].map((text, index) => (
-              <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                <ListItemText primary={text} />
-              </ListItem>
-            ))}
+            <ListItem button style={{color:'white'}}>
+              <ListItemIcon><InboxIcon /></ListItemIcon>
+              <ListItemText primary="จองห้องประชุม" />
+            </ListItem>
           </List>
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-              <Router>
-                <Route path="/" component={HomePage}/>
-              </Router>
+          <Router>
+            <Route exact path="/" component={HomePage} />
+          </Router>
         </main>
       </div>
     )

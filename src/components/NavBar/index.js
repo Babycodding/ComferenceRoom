@@ -32,7 +32,7 @@ class NavBarComponent extends Component {
         const { classes } = this.props
         return (
             <div>
-                <AppBar position="static" className={classes.appBar}>
+                <AppBar position="fixed" className={classes.appBar}>
                     <Toolbar>
                         {/* <IconButton
                             edge="start"
@@ -43,7 +43,7 @@ class NavBarComponent extends Component {
                             <MenuIcon />
                         </IconButton> */}
                         <Typography className={classes.title} variant="h6" noWrap>
-                            Material-UI
+                            Material-UId
                         </Typography>
                         <div className={classes.search}>
                             <div className={classes.searchIcon}>

@@ -6,6 +6,7 @@ export const styles = {
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+    backgroundColor:theme.palette.primary.dark
   },
   toolbar: theme.mixins.toolbar,
   menuButton: {
@@ -70,13 +71,13 @@ export const styles = {
   },
   drawerPaper: {
     width: 240,
-    // paddingTop:50,
-    zIndex: -1
+    zIndex: 1000,
+    backgroundColor: theme.palette.primary.main
   },
   content: {
     flexGrow: 1,
     paddingLeft: 270,
-    paddingRight:30
+    paddingRight:30,
   },
   // toolbar: theme.mixins.toolbar,
 }

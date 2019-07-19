@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './styles/main.scss';
 import App from './App';
 // import HomePage from './container/home';
 import { ThemeProvider } from '@material-ui/styles';
@@ -8,11 +8,11 @@ import * as serviceWorker from './serviceWorker';
 // import { BrowserRouter as Router, Route } from 'react-router-dom';
 import { theme } from './styles/theme';
 import CssBaseline from "@material-ui/core/CssBaseline";
-
+import './styles/main.scss'
 ReactDOM.render(
     <ThemeProvider theme={theme}>
         <CssBaseline />
-        <App/>
+        <App />
     </ThemeProvider>
 
     , document.getElementById('root'));

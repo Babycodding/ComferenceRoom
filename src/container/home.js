@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/styles';
-import { styles } from '../styles/style';
+import { styles } from '../AppStyle';
+import FullCalendar from '@fullcalendar/react'
+import dayGridPlugin from '@fullcalendar/daygrid'
+
 
 class HomePage extends Component {
     constructor(props) {
         super()
     }
     render() {
-        // const {classes} = this.props
         return (
             <div>
-                test
+                <FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin ]} />
             </div>
         )
     }
